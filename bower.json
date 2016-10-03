@@ -1,0 +1,23 @@
+{
+  "name": "testWork",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Pashka Bosoy <pashabos19@mail.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dark1910/testWork",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "normalize-css": "normalize.css#^4.2.0",
+    "jquery-migrate": "^3.0.0"
+  }
+}

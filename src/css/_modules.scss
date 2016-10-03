@@ -1,0 +1,489 @@
+
+/*---LOGO---*/
+.b-logo{
+  @extend %align-middle;
+  height: 20px;
+}
+
+/*---PHONE---*/
+.b-phone{
+  @extend %align-middle;
+  height: 20px;
+}
+.b-phone__link{
+  @extend %align-middle;
+  margin: 0 0 0 4px;
+  color: #fff;
+}
+.b-phone__link:hover,
+.b-phone__link:focus{
+  color: #fff;
+}
+.b-phone i{
+  @extend %align-middle;
+}
+.b-phone__header{
+  padding: 0 0 0 25px;
+  margin: 0 0 0 22px;
+  border-left: 1px solid rgba(255,255,255,.2);
+}
+
+/*---SLOGAN---*/
+.b-slogan-bot{
+  height: 570px;
+  line-height: 590px;
+  width: 100%;
+}
+.b-slogan{
+  @extend %align-middle;
+  color: #fff;
+  width: 510px;
+}
+.b-slogan__title{
+  font-size: 38px;
+  margin: 0;
+}
+.b-slogan__text{
+  font-size: 16px;
+  margin: 10px 0 0 0;
+  line-height: 24px;
+}
+.b-slogan__btn{
+  margin: 20px 0 0 0;
+  width: 185px;
+  height: 50px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.b-slogan__btn{
+  border: 1px solid $color3;
+  font-size: 14px;
+}
+.b-slogan__btn::before,
+.b-slogan__btn::after{
+  background-color: $color3;
+}
+.b-btn-animate__slogan{
+  width: 185px;
+  height: 50px;
+  margin: 20px 0 0 0;
+  line-height: 50px;
+  font-size: 14px;
+  background-color: $color3;
+}
+.b-btn-animate__slogan span{
+  left: -40px;
+  width: 40px;
+}
+.b-btn-animate__slogan:hover,
+.b-btn-animate__slogan:focus{
+  padding: 0 0 0 40px;
+}
+
+/*---FEATURES---*/
+.l-features{
+  padding: 100px 0 70px;
+}
+/*---features-parent---*/
+.b-features-parent{
+  @extend %parent;
+  margin: 0 -15px;
+}
+.b-features-item{
+  @extend %child;
+  width: 33.3333%;
+  padding: 0 15px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.b-features-item-title{
+  margin: 20px 0 0 0;
+  display: block;
+}
+.b-features-item-title a{
+  font-size: 16px;
+  line-height: 20px;
+  color: $color1;
+}
+.b-features-item__text{
+  color: $color2;
+  margin: 15px 0 0 0;
+  line-height: 22px;
+}
+.b-features-item__text:first-child{
+  margin: 0;
+}
+/*---features-bot---*/
+.b-features-parent__bot{
+  margin: 0 -40px;
+}
+.b-features-item__bot{
+  width: 50%;
+  padding: 0 40px;
+  text-align: left;
+  margin: 0 0 60px 0;
+  vertical-align: top;
+}
+.b-features-item__bot i{
+  @extend %align-middle;
+}
+.b-features-item-title__bot{
+  @extend %align-middle;
+  margin: 0 0 0 25px;
+  display: inline-block;
+}
+.b-features-item-title__bot a{
+  font-size: 16px;
+  line-height: 20px;
+  color: $color1;
+}
+
+/*---DEMONSTRATION---*/
+.l-demonstration{
+  background-color: $color5;
+}
+.b-demonstration-wrap{
+  background: transparent url("../images/demonstration-img.png") no-repeat scroll 30px 100%;
+  padding: 80px 0 115px;
+}
+.b-demonstration__title{
+  margin: 0 0 155px 0;
+}
+/*---responsive---*/
+.b-responsive{
+  width: 510px;
+  float: right;
+  margin: 0 15px 0 0;
+}
+.b-responsive p{
+  color: $color2;
+  line-height: 22px;
+}
+.b-responsive__title{
+  margin: 0;
+  text-align: left;
+}
+.b-responsive__title h4{
+  padding: 0 0 10px 0;
+}
+.b-responsive__title h4::before{
+  display: none;
+}
+
+/*---REVIEW---*/
+.l-review{
+  padding: 140px 0;
+}
+.b-review-info{
+  width: 510px;
+  float: left;
+  margin: 85px 0 0 0;
+}
+.b-review-info .b-review-info__text{
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 40px;
+  color: $color2;
+}
+.b-review-info .b-review-info__link{
+  margin: 20px 0 0 0;
+  color: $color3;
+  font-weight: 500;
+  display: inline-block;
+}
+.b-review-info .b-review-info__company{
+  display: block;
+  color: $color2;
+}
+.b-review-img{
+  margin: 0 0 0 650px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.b-review-img img{
+  border-radius: 50%;
+  max-width: 100%;
+  transition: all .5s linear;
+}
+.b-review-img img:hover{
+  opacity: .5;
+}
+
+/*---ATTENTION-MAP---*/
+.l-attention{
+  background-position: calc(100% + 45px) 60px;
+  background-repeat: no-repeat;
+  background-color: $color5;
+  padding: 165px 0;
+}
+.b-attention{
+  width: 500px;
+}
+.b-attention__text{
+  color: $color2;
+}
+
+/*---PRICE---*/
+.l-price{
+  padding: 95px 0;
+}
+.b-pricing-parent{
+  @extend %parent;
+  width: 765px;
+  border: 1px solid $color2;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.b-pricing-item{
+  @extend %child;
+  width: 33.3333%;
+  text-align: center;
+  border-left: 1px solid $color2;
+  padding: 20px 0 25px;
+}
+.b-pricing-item:first-child{
+  border: none;
+}
+.b-pricing-item:nth-child(even) .g-btn-animate{
+  background-color: $color3;
+}
+.b-pricing-item__title a{
+  font-size: 15px;
+  font-weight: 500;
+  color: $color3;
+  text-transform: uppercase;
+}
+.b-pricing-item__price{
+  font: 400 65px/70px "Montserrat";
+  color: $color1;
+  margin: 15px 0 0 0;
+}
+.b-pricing-item__price span{
+  font: 400 14px/20px 'Roboto', sans-serif;
+  display: block;
+}
+.b-pricing-item__list{
+  margin: 15px 0 0 0;
+}
+.b-pricing-item__list li{
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: $color2;
+}
+.b-pricing-item__list li:first-child{
+  margin: 0;
+}
+.b-btn-animate__pricing{
+  display: inline-block;
+  margin: 25px 0 0 0;
+}
+
+/*---plan---*/
+.b-plan{
+  padding: 70px 0 0 0;
+}
+.b-plan__title{
+  margin: 0 0 30px 0;
+}
+.b-plan__title h4{
+  font-size: 22px;
+  padding: 0 0 15px 0;
+}
+
+/*---help---*/
+.b-help{
+  padding: 40px 0 0 0;
+}
+.b-help__title{
+  margin: 0 0 30px 0;
+}
+.b-help__title h4{
+  padding: 0 0 15px 0;
+  color: $color3;
+}
+.b-help__link{
+  text-align: center;
+}
+.b-help__link a{
+  font-size: 18px;
+  color: $color1;
+}
+.b-help__link a:hover,
+.b-help__link a:focus{
+  color: $color1;
+}
+
+/*---download---*/
+.l-download{
+  height: 200px;
+  line-height: 200px;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-download{
+  position: relative;
+}
+.b-download__title{
+  @extend %align-middle;
+  margin: 0;
+  text-align: left;
+}
+.b-download__title h4{
+  padding: 0;
+}
+.b-download__title h4::before{
+  display: none;
+}
+.b-download-link{
+  float: right;
+}
+.b-download-btn{
+  width: 285px;
+  background-color: $color3;
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -20px 0 0 0;
+}
+
+/*---CONTACTS-FOOTER---*/
+/*---footer-top---*/
+.b-contacts-footer{
+  margin: 15px 0 0 0;
+}
+.b-footer-block{
+  float: left;
+  width: 25%;
+}
+.b-contacts-footer-item{
+  font-size: 13px;
+  color: $color2;
+  position: relative;
+}
+.b-contacts-footer-item i{
+  font-style: normal;
+  width: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.b-contacts-footer-item span{
+  display: block;
+  line-height: 20px;
+}
+.b-contacts-footer-item span,
+.b-contacts-footer-item a{
+  padding: 0 0 0 20px;
+}
+.b-contacts-footer-item__link-phone,
+.b-contacts-footer-item__link-phone:hover,
+.b-contacts-footer-item__link-phone:focus{
+  color: $color2;
+}
+.b-contacts-footer-item__link-mail,
+.b-contacts-footer-item__link-mail:hover,
+.b-contacts-footer-item__link-mail:focus{
+  color: $color1;
+}
+
+/*---footer-list---*/
+.b-footer-list li a{
+  color: $color2;
+  padding: 0 0 2px 0;
+}
+.b-footer-list li a:hover,
+.b-footer-list li a:focus{
+  text-decoration: none;
+  color: $color2;
+}
+.b-footer-list li a.g-link-effect::after{
+  background-color: $color1;
+}
+
+/*---footer-feesdback---*/
+.b-footer-feedback__text{
+  font-size: 13px;
+  line-height: 18px;
+  color: $color1;
+}
+.b-footer-feedback-form{
+  margin: 15px 0 0 0;
+}
+.b-footer-feedback__input-img{
+  position: relative;
+}
+.b-footer-feedback__input-img i{
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+.b-footer-feedback__input-img input{
+  background-color: #eef1ec;
+  border-radius: 3px;
+  padding: 5px 35px 5px 10px;
+}
+
+/*---footer-bot---*/
+.b-footer{
+  height: 100%;
+  position: relative;
+}
+.b-footer-bot{
+  @extend %parent;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #f2f2f2;
+}
+.b-footer-bot-block{
+  @extend %child;
+  width: 50%;
+  vertical-align: middle;
+}
+.b-copy p{
+  font-size: 12px;
+  color: $color2;
+}
+.b-socials{
+  text-align: right;
+}
+.b-socials li{
+  display: inline-block;
+  margin: 0 0 0 7px;
+}
+.b-socials li:first-child{
+  margin: 0;
+}
+.b-socials li a{
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 31px;
+  font-size: 18px;
+}
+.b-socials li a:hover{
+  opacity: .7;
+}
+.tw{
+  background-color: #55acee;
+}
+.fb{
+  background-color: #3b5998;
+}
+.inst{
+  background-color: #3f729b;
+}
+.ld{
+  background-color: #1686B0;
+}
+.you{
+  background-color: #C6312D;
+}

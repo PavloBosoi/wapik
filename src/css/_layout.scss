@@ -1,0 +1,128 @@
+/* Header
+-----------------------------------------------------------------------------*/
+.l-header {
+  height: 660px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+.l-header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45,110,112,.9);
+  z-index: 1;
+}
+.b-header-top{
+  height: 85px;
+  line-height: 85px;
+  font: 400 13px/21px "Montserrat";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: all .5s linear;
+}
+.scroll-top{
+  background-color: $color1;
+}
+.b-header-top-wrap{
+  position: relative;
+  z-index: 2;
+  transition: all .5s linear;
+}
+.b-header-top-wrap::before,
+.b-header-top-wrap::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 1px;
+  background-color: rgba(255,255,255,.2);
+  transition: all .5s linear;
+}
+.b-header-top-wrap::before{
+  left: 0;
+}
+.b-header-top-wrap::after{
+  right: 0;
+}
+.scroll-top .b-header-top-wrap::before{
+  width: 0;
+}
+.scroll-top .b-header-top-wrap::after{
+  width: 0;
+}
+
+/*===h-menu===*/
+.l-menu{
+  margin: 28px 0 0 0;
+  position: relative;
+  z-index: 2;
+  float: right;
+}
+.l-menu ul{
+  @extend %parent;
+}
+.l-menu li{
+  @extend %child;
+  margin: 0 0 0 30px;
+  vertical-align: middle;
+}
+.l-menu li:first-child{
+  margin: 0;
+}
+.l-menu li a{
+  font-size: 13px;
+  color: rgba(255,255,255,.7);
+  text-transform: uppercase;
+  padding: 0 0 2px 0;
+}
+.l-menu li a:hover,
+.l-menu li a:focus,
+.l-menu li.active a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.b-menu__btn{
+  width: 110px;
+  height: 32px;
+  line-height: 30px;
+  border: 1px solid $color4;
+}
+.b-menu__btn::before,
+.b-menu__btn::after{
+  background-color: $color4;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.l-wrapper {
+  margin: 0 auto;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+.l-content {
+  padding: 0 0 355px;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.l-footer{
+  margin: -355px auto 0;
+  padding: 100px 0 0 0;
+  height: 355px;
+  position: relative;
+}
+.l-footer > .container{
+  height: 100%;
+}

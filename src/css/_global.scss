@@ -1,0 +1,380 @@
+
+/*---icon---*/
+.icon {
+  display: inline-block;
+}
+
+/*---link-effect---*/
+.g-link-effect{
+  position: relative;
+}
+.g-link-effect::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  transform: scaleX(0);
+}
+
+.g-link-effect:hover::after{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/*---g-shine-effect---*/
+.g-shine-effect{
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.g-shine-effect::after{
+  content: '';
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+                  to right,
+                  rgba(255, 255, 255, 0.13) 0%,
+                  rgba(255, 255, 255, 0.13) 77%,
+                  rgba(255, 255, 255, 0.5) 92%,
+                  rgba(255, 255, 255, 0.0) 100%
+  );
+}
+.g-shine-effect:hover:after{
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+
+/*---btn---*/
+.g-btn{
+  width: 140px;
+  height: 42px;
+  line-height: 40px;
+  border: 1px solid $color2;
+  color: #fff;
+  text-align: center;
+  display: block;
+  font: 400 13px "Montserrat";
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.g-btn::before,
+.g-btn::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  background-color: $color2;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all .5s linear;
+}
+.g-btn::before{
+  left: 0;
+  width: 50%;
+}
+.g-btn::after{
+  right: 0;
+  width: 50%;
+}
+.g-btn:hover::before,
+.g-btn:hover::after{
+  width: 0;
+}
+.g-btn:hover,
+.g-btn:focus{
+  color: #fff;
+  text-decoration: none;
+}
+
+.g-btn-animate{
+  width: 140px;
+  height: 40px;
+  margin: 25px 0 0 0;
+  line-height: 40px;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  font: 400 13px "Montserrat";
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: $color2;
+}
+.g-btn-animate span{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 100%;
+  background-color: $color1;
+  color: #fff;
+  font-size: 16px;
+  transition: all .3s linear;
+}
+.g-btn-animate:hover span,
+.g-btn-animate:focus span{
+  left: 0;
+}
+.g-btn-animate:hover,
+.g-btn-animate:focus{
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0 0 30px;
+}
+
+/*---title---*/
+.g-main-title{
+  font-size: 32px;
+  line-height: 36px;
+  color: $color1;
+  text-align: center;
+  margin: 0 0 65px 0;
+}
+.g-main-title i{
+  margin: 0 0 15px 0;
+}
+.g-main-title h4{
+  padding: 0 0 23px 0;
+  font-weight: 300;
+  position: relative;
+}
+.g-main-title h4::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 64px;
+  height: 1px;
+  background-color: $color3;
+  margin: 0 0 0 -32px;
+}
+.g-main-title p{
+  font-size: 15px;
+  margin: 12px auto 0;
+  line-height: 20px;
+  color: $color2;
+}
+
+.g-footer-title{
+  font-size: 13px;
+  color: $color1;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+/*---lines---*/
+.g-line-block{
+  width: 90px;
+  height: 90px;
+  margin: 30px auto 50px;
+  border-bottom: 2px solid #f2f2f2;
+  position: relative;
+}
+.g-line-block::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+
+/*---parallax---*/
+.g-parallax{
+  position: relative;
+  z-index: 2;
+}
+
+/*---preloader---*/
+.g-loader {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.g-loader-inner {
+  width: 230px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -115px;
+  position: relative;
+  z-index: 2;
+}
+.g-loader span{
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+}
+.g-loader__left{
+  left: 0;
+}
+.g-loader__right{
+  right: 0;
+}
+//центрирование по вертикали и z-index
+.g-layer-vam{
+  @extend %align-middle;
+  position: relative;
+  z-index: 2;
+}
+
+/*---list---*/
+.g-list-ok{
+  margin: 15px 0 0 0;
+}
+.g-list-ok li{
+  color: $color2;
+  padding: 0 0 0 35px;
+  margin: 12px 0 0 0;
+  min-height: 25px;
+  line-height: 25px;
+  position: relative;
+}
+.g-list-ok li i{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+}
+
+/*---column---*/
+.g-column{
+  @extend %parent;
+  margin: 0 -40px;
+}
+.g-column-item{
+  @extend %child;
+  width: 33.3333%;
+  padding: 0 40px;
+  vertical-align: top;
+}
+
+
+/*---btn-menu---*/
+.g-menu-text{
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.g-btn-menu{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 0 5px;
+  vertical-align: bottom;
+  padding: 0;
+  width: 22px;
+  height: 18px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.g-btn-menu:focus {
+  outline: none;
+}
+
+.g-btn-menu i {
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  right: 0px;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.g-btn-menu i::before,
+.g-btn-menu i::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  -webkit-transition-duration: .3s, .3s;
+  transition-duration: .3s, .3s;
+  -webkit-transition-delay: .3s, 0s;
+  transition-delay: .3s, 0s;
+}
+
+.g-btn-menu i::before {
+  top: -7px;
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+}
+
+.g-btn-menu i::after {
+  bottom: -7px;
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+}
+
+/* активное состояние, т.е. меню открыто */
+.g-btn-menu.active i {
+  background: none;
+  width: 100%;
+}
+
+.g-btn-menu.active i::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.g-btn-menu.active i::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.g-btn-menu.active i::before,
+.g-btn-menu.active i::after {
+  -webkit-transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.3s;
+}

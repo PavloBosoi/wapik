@@ -1,0 +1,29 @@
+
+$dark_green: #0f5f5c;
+$light_green: #83a7a5;
+$lime: #6fb048;
+$dark-gray: #6b7f7f;
+$gray: #eef1ec;
+
+$color1: $dark_green;
+$color2: $light_green;
+$color3: $lime;
+$color4: $dark-gray;
+$color5: $gray;
+
+%parent{
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -7px;
+}
+%child{
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: normal;
+  display: inline-block;
+}
+%align-middle{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
